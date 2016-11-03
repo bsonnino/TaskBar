@@ -1,0 +1,26 @@
+﻿<Window x:Class="TaskBar.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.TaskbarItemInfo>
+        <TaskbarItemInfo x:Name="taskItemInfo">
+            <TaskbarItemInfo.ThumbButtonInfos>
+                <ThumbButtonInfo ImageSource="Images/first_track_blue16.png" 
+                Click="btnAnteriorClick"/>
+                <ThumbButtonInfo ImageSource="Images/last_track_blue16.png" 
+                Click="btnProximoClick"/>
+            </TaskbarItemInfo.ThumbButtonInfos>
+        </TaskbarItemInfo>
+    </Window.TaskbarItemInfo>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+        <Image x:Name="img" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5" />
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <Button Margin="5" Width="65" Height="30" Content="Anterior" Click="Button_Click"/>
+            <Button Margin="5" Width="65" Height="30" Content="Próximo" Click="Button_Click_1" />
+        </StackPanel>
+    </Grid>
+</Window>
